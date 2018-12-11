@@ -1,9 +1,9 @@
-import { Injectable } from '@nestjs/common';
-import { Cat } from '../graphql.schema';
+import {Injectable} from '@nestjs/common';
+import {Cat} from '../graphql.schema';
 
 @Injectable()
 export class CatsService {
-    private readonly cats: Cat[] = [{ id: 1, name: 'Cat', age: 5 }];
+    private readonly cats: Cat[] = [{id: 1, name: 'Cat', age: 5}];
 
     create(cat: Cat): Cat {
         this.cats.push(cat);
