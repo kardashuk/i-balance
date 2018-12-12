@@ -1,11 +1,19 @@
 import {TestBed, async} from '@angular/core/testing';
 import {AppComponent} from './app.component';
+import {CatsComponent} from "./cats/cats.component";
+import {GraphQLModule} from "./graphql.module";
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
+            imports:[
+                HttpClientTestingModule,
+                GraphQLModule
+            ],
             declarations: [
                 AppComponent,
+                CatsComponent
             ],
         }).compileComponents();
     }));
