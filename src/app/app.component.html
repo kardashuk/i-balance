@@ -1,7 +1,16 @@
-<div style="text-align:center">
-    <h1>
-        Welcome to {{ title }}!
-    </h1>
-    <img width="128" alt="Angular Logo" src="assets/logo-256.png">
-</div>
-<app-cats></app-cats>
+<h4 *ngIf="auth.isAuthenticated()">
+    You are logged in!
+    <img *ngIf="profile?.picture" [src]="profile?.picture" width="30" [title]="profile?.nickname"/>
+    <button
+            *ngIf="auth.isAuthenticated()"
+            (click)="auth.logout()">
+        Log Out
+    </button>
+
+    <nav>
+        <a routerLink="/dashboard">Dashboard</a>
+        <a routerLink="/cats">Cats</a>
+    </nav>
+</h4>
+
+<router-outlet></router-outlet>
