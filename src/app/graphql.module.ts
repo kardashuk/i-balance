@@ -21,7 +21,7 @@ export function createApollo(httpLink: HttpLink) {
                 tokenGetter: () => {
                     return localStorage.getItem('access_token');
                 },
-                whitelistedDomains: ['i-balance.eu.auth0.com','localhost:4200'],
+                whitelistedDomains: ['i-balance.eu.auth0.com', 'localhost:4200'],
             }
         })],
     exports: [ApolloModule, HttpLinkModule],

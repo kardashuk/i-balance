@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { AUTH_CONFIG } from './auth0.variables';
-import { Router } from '@angular/router';
+import {Injectable} from '@angular/core';
+import {AUTH_CONFIG} from './auth0.variables';
+import {Router} from '@angular/router';
 import * as auth0 from 'auth0-js';
 
 @Injectable()
@@ -71,7 +71,9 @@ export class AuthService {
                 alert(`Could not get a new token (${err.error}: ${err.error_description}).`);
                 this.logout();
             }
-            if (cb){cb()}
+            if (cb) {
+                cb()
+            }
         });
     }
 

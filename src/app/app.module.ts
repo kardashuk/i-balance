@@ -8,7 +8,7 @@ import {GraphQLModule} from "./graphql.module";
 import {CallbackComponent} from './auth/callback/callback.component';
 import {AuthService} from "./auth/auth.service";
 import {RoutingModule} from "./routing.module";
-import { DashboardComponent } from './dashboard/dashboard.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
 
 @NgModule({
     imports: [
